@@ -4,7 +4,7 @@ START: int = 50
 LEFT = -1
 RIGHT = 1
 
-def task1(FILENAME, START):
+def task1():
     position: int = START
     zero_count: int = 0
 
@@ -25,7 +25,7 @@ def task1(FILENAME, START):
     return zero_count
 
 
-def task2(FILENAME, START):
+def task2():
     position: int = START
     zero_count: int = 0
 
@@ -55,5 +55,5 @@ def parse(line: str):
     r2: int = int(line[1:])
     return (r1, r2)
 
-print(f"The code to day 1 part 1 is: {task1(FILENAME, START)}")
-print(f"The code to day 1 part 2 is: {task2(FILENAME, START)}")
+print(f"The code to day 1 part 1 is: {task1()}")
+print(f"The code to day 1 part 2 is: {task2()}")

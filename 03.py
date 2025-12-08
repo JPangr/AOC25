@@ -1,6 +1,6 @@
 FILENAME = "03_input.txt"
 
-def task1(FILENAME):
+def task1():
     result: int = 0
     with open(FILENAME) as f:
         lines: list[str] = f.readlines()
@@ -22,7 +22,7 @@ def task1(FILENAME):
     return result
 
 
-def task2(FILENAME):
+def task2():
     result: int = 0
     with open(FILENAME) as f:
         lines: list[str] = f.readlines()
@@ -55,5 +55,5 @@ def task2(FILENAME):
 
     return result
 
-print(f"The code to day 3 part 1 is: {task1(FILENAME)}")
-print(f"The code to day 3 part 2 is: {task2(FILENAME)}")
+print(f"The code to day 3 part 1 is: {task1()}")
+print(f"The code to day 3 part 2 is: {task2()}")

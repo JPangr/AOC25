@@ -1,6 +1,6 @@
 FILENAME = "02_input.txt"
 
-def task1(FILENAME):
+def task1():
     result: int = 0
 
     with open(FILENAME) as f:
@@ -18,7 +18,7 @@ def task1(FILENAME):
     return result
 
 
-def task2(FILENAME):
+def task2():
     result: int = 0
 
     with open(FILENAME) as f:
@@ -45,5 +45,5 @@ def is_valid_2(id: str):
             return False
     return True
 
-print(f"The code to day 2 part 1 is: {task1(FILENAME)}")
-print(f"The code to day 2 part 2 is: {task2(FILENAME)}")
+print(f"The code to day 2 part 1 is: {task1()}")
+print(f"The code to day 2 part 2 is: {task2()}")

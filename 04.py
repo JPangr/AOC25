@@ -1,6 +1,6 @@
 FILENAME = "04_input.txt"
 
-def task1(FILENAME):
+def task1():
     with open(FILENAME) as f:
         grid: list[str] = f.readlines()
 
@@ -36,7 +36,7 @@ def is_accessible(x: int, y: int, grid: list[str]):
     return count < 4
 
 
-def task2(FILENAME):
+def task2():
     with open(FILENAME) as f:
         grid: list[str] = f.readlines()
 
@@ -59,5 +59,5 @@ def task2(FILENAME):
     return count
 
 
-print(f"The code to day 4 part 1 is: {task1(FILENAME)}")
-print(f"The code to day 4 part 2 is: {task2(FILENAME)}")
+print(f"The code to day 4 part 1 is: {task1()}")
+print(f"The code to day 4 part 2 is: {task2()}")
