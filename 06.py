@@ -34,4 +34,43 @@ def task1():
     return result
 
 
+def task2():
+    with open(FILENAME) as f:
+        lines: list[str] = f.readlines()
+        for line in lines:
+            line = line.strip("\n")
+
+    result: int = 0
+
+    i: int = 0
+    while i < len(lines[-1]):
+
+        if i >= len(lines[-1])-5:
+            pass
+
+        k: int = i
+        subtotal: int = 1 if lines[-1][i] == "*" else 0
+        while k < len(lines[-1]) and (k == i or lines[-1][k] == " "):
+            if k != i and k < len(lines[-1]) and lines[-1][k+1] != " " and lines[-1][k+1] != "\n":
+                break
+
+            num: int = 0
+            for n in range(len(lines)-1):
+                if lines[n][k] != " " and lines[n][k] != "\n":
+                    num *= 10
+                    num += int(lines[n][k])
+            if lines[-1][i] == "*":
+                subtotal *= num
+            else:
+                subtotal += num
+
+            k += 1
+
+        result += subtotal
+        i = k+1
+
+    return result
+
+
 print(f"The code to day 6 part 1 is: {task1()}")
+print(f"The code to day 6 part 2 is: {task2()}")
